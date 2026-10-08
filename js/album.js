@@ -281,7 +281,7 @@
       const a = document.createElement('a');
       a.style.display = 'none';
       a.href = blobUrl;
-      a.download = fileName || 'Linto_and_Femi_Wedding_Photo.jpg';
+      a.download = fileName || 'Linto_and_Femi_Betrothal_Photo.jpg';
       document.body.appendChild(a);
       a.click();
       setTimeout(() => {
@@ -296,7 +296,7 @@
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
       a.href = directUrl;
-      a.download = fileName || 'Linto_and_Femi_Wedding_Photo.jpg';
+      a.download = fileName || 'Linto_and_Femi_Betrothal_Photo.jpg';
       document.body.appendChild(a);
       a.click();
       setTimeout(() => document.body.removeChild(a), 500);
@@ -418,8 +418,8 @@
   if (shareBtn) {
     shareBtn.addEventListener('click', async () => {
       const shareData = {
-        title: 'Linto & Femi — Holy Matrimony Celebration Album',
-        text: 'Explore the photographs from the wedding celebration of Linto & Femi.',
+        title: 'Linto & Femi — Betrothal Celebration Album',
+        text: 'Explore the photographs from the betrothal celebration of Linto & Femi.',
         url: window.location.href
       };
 

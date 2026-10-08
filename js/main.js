@@ -1,5 +1,5 @@
 /* ============================================================
-   LINTO & FEMI — WEDDING INVITATION
+   LINTO & FEMI — BETROTHAL INVITATION
    main.js — All interactivity
    ============================================================ */
 
@@ -9,19 +9,19 @@
 const weddingConfig = {
   groom:              "Linto George",
   bride:              "Femi Roy",
-  weddingDate:        "2026-11-07",           // ISO date
-  weddingDateDisplay: "Saturday, 7 November 2026",
-  weddingVenue:       "St. Mary's Church, Chittissery P O, Thrissur",
-  receptionVenue:     "Jubilee Memorial Parish Hall, Chittissery, Thrissur",
+  weddingDate:        "2026-10-31",           // ISO date
+  weddingDateDisplay: "Saturday, 31 October 2026",
+  weddingVenue:       "St. Francis Xavier's Church, Chevoor",
+  receptionVenue:     "St. Francis Xavier's Parish Hall, Chevoor",
   phone1:             "8593850720",
   phone2:             "9895558575",
   musicFile:          "Music/Sunlight_on_the_Aisle.mp3",
   musicVolume:        0.5,                    // 0.0 – 1.0
   // Times for calendar events (IST)
-  ceremonyTime:       "11:00",
-  ceremonyEndTime:    "12:30",
-  receptionTime:      "12:30",
-  receptionEndTime:   "15:30",
+  ceremonyTime:       "16:00",
+  ceremonyEndTime:    "18:00",
+  receptionTime:      "18:00",
+  receptionEndTime:   "21:00",
   // Photos in Images/Moments/ folder
   moments: [
     { src: "Images/Moments/Image 1.jpeg", alt: "Linto & Femi — Beautiful Moments" },
@@ -61,7 +61,7 @@ function initFloatingNav() {
 
 /* ── 2. COUNTDOWN ───────────────────────────────────────────── */
 function initCountdown() {
-  const wedding  = new Date(`${weddingConfig.weddingDate}T11:00:00+05:30`);
+  const wedding  = new Date(`${weddingConfig.weddingDate}T16:00:00+05:30`);
   const slots = {
     days:    $('#cd-days-slot'),
     hours:   $('#cd-hours-slot'),
@@ -537,21 +537,21 @@ function initCalendarButtons() {
   const btnReception = $('#btn-cal-reception');
 
   const ceremonyUrl = buildGoogleCalendarUrl(
-    `Holy Matrimony — ${weddingConfig.groom} & ${weddingConfig.bride}`,
+    `Betrothal — ${weddingConfig.groom} & ${weddingConfig.bride}`,
     weddingConfig.weddingDate,
     weddingConfig.ceremonyTime,
     weddingConfig.ceremonyEndTime,
     weddingConfig.weddingVenue,
-    `Wedding Ceremony of ${weddingConfig.groom} & ${weddingConfig.bride}.\n\nDate: ${weddingConfig.weddingDateDisplay}\nTime: 11:00 AM IST\nVenue: ${weddingConfig.weddingVenue}\nLocation map: https://maps.google.com/?q=St+Mary's+Church+Chittissery+Thrissur\n\nReception to follow at Jubilee Memorial Parish Hall, Chittissery.`
+    `Betrothal Ceremony of ${weddingConfig.groom} & ${weddingConfig.bride}.\n\nDate: ${weddingConfig.weddingDateDisplay}\nTime: 4:00 PM IST\nVenue: ${weddingConfig.weddingVenue}\nLocation map: https://maps.app.goo.gl/n5mKxbjYi8LhjV6e9\n\nReception to follow at ${weddingConfig.receptionVenue}.`
   );
 
   const receptionUrl = buildGoogleCalendarUrl(
-    `Wedding Reception — ${weddingConfig.groom} & ${weddingConfig.bride}`,
+    `Reception — ${weddingConfig.groom} & ${weddingConfig.bride}`,
     weddingConfig.weddingDate,
     weddingConfig.receptionTime,
     weddingConfig.receptionEndTime,
     weddingConfig.receptionVenue,
-    `Wedding Reception (Lunch & Celebration) of ${weddingConfig.groom} & ${weddingConfig.bride}.\n\nDate: ${weddingConfig.weddingDateDisplay}\nTime: 12:30 PM IST onwards\nVenue: ${weddingConfig.receptionVenue}\nLocation map: https://maps.google.com/?q=Jubilee+Memorial+Parish+Hall+Chittissery+Thrissur`
+    `Reception of ${weddingConfig.groom} & ${weddingConfig.bride}.\n\nDate: ${weddingConfig.weddingDateDisplay}\nTime: 6:00 PM IST onwards\nVenue: ${weddingConfig.receptionVenue}\nLocation map: https://maps.app.goo.gl/acyAfCsR8GA4bN6s9`
   );
 
   if (btnCeremony) {
@@ -802,12 +802,12 @@ async function scanFormalInvitationCards() {
     if (!engagementImg && scannedImages[1]) engagementImg = scannedImages[1];
   }
 
-  // Render Wedding Tab
+  // Render Wedding / Betrothal Tab
   if (weddingImg) {
-    weddingUploadedContainer.innerHTML = `<img src="${weddingImg}" alt="Physical Wedding Invitation Card" class="uploaded-card-img" />`;
+    weddingUploadedContainer.innerHTML = `<img src="${weddingImg}" alt="Physical Betrothal Invitation Card" class="uploaded-card-img" />`;
     weddingUploadedContainer.style.display = 'flex';
     if (weddingDigitalCard) weddingDigitalCard.style.display = 'none';
-    if (weddingHint) weddingHint.textContent = 'Physical wedding invitation card from uploaded folder.';
+    if (weddingHint) weddingHint.textContent = 'Physical betrothal invitation card from uploaded folder.';
   } else {
     weddingUploadedContainer.style.display = 'none';
     if (weddingDigitalCard) weddingDigitalCard.style.display = 'block';
@@ -1189,11 +1189,11 @@ function openSkyStarPopover(wish, starEl, pos) {
     popover.style.top = `${topPx}px`;
     popover.style.transform = 'translateX(-50%)';
   } else {
-    // On mobile: center inside viewport (unchanged)
+    // On mobile: center cleanly inside the sky viewport
     popover.style.left = '50%';
-    popover.style.top = 'auto';
-    popover.style.bottom = '110px';
-    popover.style.transform = 'translateX(-50%)';
+    popover.style.top = '50%';
+    popover.style.bottom = 'auto';
+    popover.style.transform = 'translate(-50%, -50%)';
   }
 
   activeStarPopover = starEl;
