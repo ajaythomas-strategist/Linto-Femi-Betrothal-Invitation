@@ -2986,6 +2986,14 @@ button {
   transition: transform 0.8s var(--ease-elegant);
 }
 
+.event__card-layout--ceremony .event__blended-img {
+  object-position: center 20%;
+}
+
+.event__card-layout--reception .event__blended-img {
+  object-position: center 20%;
+}
+
 .event__photo-blended:hover .event__blended-img {
   transform: scale(1.05);
 }
@@ -3127,6 +3135,11 @@ button {
   z-index: 4;
   pointer-events: none;
   transform: rotate(-4deg);
+}
+
+.event__card-layout--reception .event__script-badge {
+  color: #0d2719;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.95), 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .event__bottom-tag {
