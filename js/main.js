@@ -2058,7 +2058,7 @@ function initPhotoAlbumsCarousel() {
     const fallbackMap = {
       '1a_FjmQM-5R_i3R_-0iLb9_PO452Sk2IE': 'Images/Groom.jpg',
       '1KgDn9CwmOqfldfoFaj1rRHrTyKh8ueyR': 'Images/Moments/Image 3.jpeg',
-      '1Axi4HfMKQ3P_pN807TGyQMqtwxuhNGem': 'Images/Hero.jpg',
+      '1Axi4HfMKQ3P_pN807TGyQMqtwxuhNGem': 'Images/Hero.jpeg',
       '12S15NQN1QMcqf7qxnmPOqw5prFcZD5vy': 'Images/Moments/Image 2.jpeg',
       '1ws2vrQeg3SV9z1BieaVEimCUPQpFBdF_': 'Images/Moments/Image 1.jpeg',
       '1I-ZftraYW6cIUy4hc6Pym1Q1zRrLeXlW': 'Images/Groom.jpg',
@@ -2069,7 +2069,7 @@ function initPhotoAlbumsCarousel() {
     const localCarouselFallbacks = [
       'Images/Groom.jpg',
       'Images/Moments/Image 3.jpeg',
-      'Images/Hero.jpg',
+      'Images/Hero.jpeg',
       'Images/Moments/Image 2.jpeg',
       'Images/Moments/Image 1.jpeg',
       'Images/Moments/Image 5.jpeg',

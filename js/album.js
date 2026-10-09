@@ -27,7 +27,7 @@
         thumb: 'https://lh3.googleusercontent.com/d/1Axi4HfMKQ3P_pN807TGyQMqtwxuhNGem=w800',
         full: 'https://lh3.googleusercontent.com/d/1Axi4HfMKQ3P_pN807TGyQMqtwxuhNGem=w1600',
         download: 'https://drive.google.com/uc?export=download&id=1Axi4HfMKQ3P_pN807TGyQMqtwxuhNGem',
-        fallback: 'Images/Hero.jpg',
+        fallback: 'Images/Hero.jpeg',
         scriptBadge: 'Bound Together ♡'
       },
       {
@@ -144,7 +144,7 @@
           const defaultFallbacks = [
             'Images/Groom.jpg',
             'Images/Moments/Image 3.jpeg',
-            'Images/Hero.jpg',
+            'Images/Hero.jpeg',
             'Images/Moments/Image 2.jpeg',
             'Images/Moments/Image 1.jpeg',
             'Images/Groom.jpg',
@@ -344,7 +344,7 @@
       };
     }
 
-    const fallbackSrc = item.fallback || 'Images/Hero.jpg';
+    const fallbackSrc = item.fallback || 'Images/Hero.jpeg';
     const tempImg = new Image();
     tempImg.referrerPolicy = 'no-referrer';
     tempImg.onload = () => {
